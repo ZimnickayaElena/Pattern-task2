@@ -6,13 +6,10 @@ import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import lombok.Value;
-import lombok.val;
-import org.openqa.selenium.remote.Response;
 
 import java.util.Locale;
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.specification.RequestSpecification.*;
 
 
 public class DataGenerator {
@@ -60,7 +57,7 @@ public class DataGenerator {
         public static RegistrationDto getRegisteredUser(String status) {
             var registeredUser = getUser(status);
             sendRequest(registeredUser);
-           return registeredUser;
+            return registeredUser;
         }
     }
 
